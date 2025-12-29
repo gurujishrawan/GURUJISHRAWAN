@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+/* NatGeo style depth effect */
+.natgeo-swiper .swiper-slide {
+  transform: scale(0.85);
+  opacity: 0.4;
+  transition: all 0.4s ease;
+}
+
+.natgeo-swiper .swiper-slide-active {
+  transform: scale(1);
+  opacity: 1;
+  z-index: 10;
+}
+
+.natgeo-swiper .swiper-button-prev,
+.natgeo-swiper .swiper-button-next {
+  color: #facc15; /* yellow */
+}
+/* Cinematic NatGeo-style carousel */
+.natgeo-swiper .swiper-slide {
+  transform: scale(0.88);
+  opacity: 0.45;
+  filter: blur(1px);
+  transition: all 0.4s ease;
+}
+
+.natgeo-swiper .swiper-slide-active {
+  transform: scale(1);
+  opacity: 1;
+  filter: blur(0);
+  z-index: 10;
+}
+
+/* Navigation arrows – subtle */
+.natgeo-swiper .swiper-button-prev,
+.natgeo-swiper .swiper-button-next {
+  color: #facc15;
+  transform: scale(0.85);
+}
+.natgeo-swiper .swiper-slide {
+  transform: scale(0.88);
+  opacity: 0.45;
+  filter: blur(1px);
+  transition: all 0.4s ease;
+}
+
+.natgeo-swiper .swiper-slide-active {
+  transform: scale(1);
+  opacity: 1;
+  filter: blur(0);
+}
+
+.natgeo-swiper .swiper-button-prev,
+.natgeo-swiper .swiper-button-next {
+  color: #facc15;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  color: #111;
+}
+
+/* Premium container spacing */
+.section {
+  padding: 6rem 1.5rem;
+}
+
+/* Subtle fade animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: all 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card hover polish */
+.card {
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
